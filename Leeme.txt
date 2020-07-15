@@ -1,0 +1,1 @@
+Para usar la app hagan click en el archivo index.html
