@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <div class="menu-btn">
+          <div class="menu-btn_burger"></div>
+        </div>
+      </label>
+      <label class="title">Instrucciones</label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="ejemplo.html" class="active">Instrucciones</a>
+        </li>
+        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+      </ul>
+    </nav>
+
+    <div class="instrucciones">
+      <h2>Instrucciones</h2>
+      <p class="info">
+        Al principio va a aparecer solo la cantidad de registros que desea y el
+        size Input que es la cantidad de datos que se le va a colocar a la
+        maquina, si es size input es menor que la cantidad de registros se van a
+        rellenar los espacios que faltan con 0, si es mayor se ignoran los que
+        sobran luego si los datos estan bien se va a abrir la maquina. En esta
+        etapa va a tener que especificar los datos que quiere colocar en la
+        maquina.
+      </p>
+      <p class="info">
+        Luego se va a abrir el menu de instrucciones en donde se va a poder
+        elejir entre ejecutar una instruccion individual o una lista de
+        instrucciones. En donde va a aparecer un drop menu con las posibles
+        opciones, en donde se muestran la cantidad de parametros necesarios, en
+        el cual se tienen qe poner en un input box con los valores separados en
+        coma. Finalmente al apretar el boton de ejectuar instruccion, se va
+        recorrer la lista o ejectuar la instruccion y se va a ver reflejado en
+        la maquina
+      </p>
+
+      <h2>Ejemplo</h2>
+      <video controls>
+        <source src="fotos\ejemplo_proyecto.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <p>
+      El ejemplo contiene un video como se usan tanto la instruccion individual
+      como la lista de instrucciones
+    </p>
+
+    <script src="btn.js"></script>
+  </body>
+</html>

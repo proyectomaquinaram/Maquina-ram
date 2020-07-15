@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="barra">
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <div class="menu-btn">
+            <div class="menu-btn_burger"></div>
+          </div>
+        </label>
+        <label class="title">Maquina de Ram</label>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="ejemplo.html">Instrucciones</a></li>
+          <li><a href="nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="data-incial">
+      <h3>Data Inicial</h3>
+      <table>
+        <tr>
+          <th>Numero de registros:</th>
+          <td><input type="text" id="numRegistros" /></td>
+        </tr>
+        <tr>
+          <th>Input Size:</th>
+          <td><input type="text" id="sizeInput" /></td>
+        </tr>
+      </table>
+      <button id="btnInicio">
+        Confrimar Data
+      </button>
+    </div>
+    <div class="invisible" id="maquina">
+      <h3>Maquina</h3>
+      <input
+        type="text"
+        id="registrosData"
+        placeholder="Colocar Int,Int,Int..."
+      />
+      <button id="btnData">Confirmar Data</button>
+      <table class="maquina">
+        <tr>
+          <th>Registro</th>
+          <th>Valores</th>
+        </tr>
+      </table>
+      <h3 class="invisible" id="resultado">Resultado:</h3>
+    </div>
+
+    <div class="divinstrucciones invisible">
+      <h3>Menu Instrucciones</h3>
+      <nav>
+        <button id="btnIndividual">Instruccion Individual</button>
+        <button id="btnLista">Lista de Instrucciones</button>
+      </nav>
+      <div class="instruccion invisible">
+        <p>Que acciones quieres hacer</p>
+        <select id="accion" class="accion">
+          <option value="inc">INC(r)</option>
+          <option value="dec">DEC(r)</option>
+          <option value="goto">GOTO(r)</option>
+          <option value="halt">HALT</option>
+          <option value="clear">CLEAR(r)</option>
+          <option value="move">MOVE(r,s)</option>
+          <option value="add">ADD(r,s,t)</option>
+          <option value="copy">COPY(r,s,t)</option>
+        </select>
+        <input
+          type="text"
+          class="valores"
+          placeholder="colocar variables con coma"
+        />
+        <button id="agregar">Agregar Instruccion</button>
+      </div>
+      <div class="lista invisible">
+        <button id="reset">Reset</button>
+        <button id="ejecutar-ins">Ejecutar Instrucciones</button>
+        <p>Lista</p>
+        <ol id="listaIns" start="0"></ol>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="btn.js"></script>
+  </body>
+</html>

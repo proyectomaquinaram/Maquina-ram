@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  min-width: 500px;
+  width: auto !important;
+  width: 500px;
+}
+.barra nav {
+  height: 80px;
+  width: 100%;
+}
+label.title {
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0px 70px;
+  font-weight: bold;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 60px;
+  margin: 0px 5px;
+}
+nav ul li a {
+  color: black;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.fotos {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.persona {
+  margin-left: 15px;
+}
+a.active,
+a:hover {
+  background: lightgray;
+  color: black;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 70px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 100%) {
+  label.title {
+    font-size: 30px;
+    padding-left: 30px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    background: lightslategray;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0px;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: white;
+  }
+  #check:checked ~ ul {
+    left: 0px;
+  }
+}
+/* Codigo de como funciona el menu viene de https://www.youtube.com/watch?v=oLgtucwjVII*/
+.menu-btn {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 28px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger {
+  position: absolute;
+  top: 12px;
+  width: 25px;
+  height: 3px;
+  background: black;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+}
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: black;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before {
+  transform: translateY(-10px);
+}
+.menu-btn_burger::after {
+  transform: translateY(10px);
+}
+.open .menu-btn_burger {
+  transform: translateX(-10px);
+  background: transparent;
+}
+.open .menu-btn_burger::before {
+  transform: rotate(45deg) translate(15px, -15px);
+}
+.open .menu-btn_burger::after {
+  transform: rotate(-45deg) translate(15px, 15px);
+}
+/* Codigo del icono del menu viene de https://www.youtube.com/watch?v=dIyVTjJAkLw*/
+.invisible {
+  visibility: hidden;
+}
+
+.linea {
+  display: inline-block;
+}
+.maquina,
+.maquina th,
+.maquina td {
+  margin: 15px 0px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px 10px;
+}
+.divinstrucciones {
+  margin: 0px;
+}
+.bold {
+  font-weight: bold;
+}
+.maquina {
+  margin-top: 10px;
+}
+.info {
+  justify-content: center;
+  text-align: justify;
+}
